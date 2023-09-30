@@ -47,3 +47,14 @@ body {
     background-color: #FFD700; /* Gold color for a premium feel */
     transform: scale(1.05); /* Slight zoom effect */
 }
+
+.headline {
+    text-align: center;
+    font-size: 4em; /* Large font size */
+    margin-top: 5%; /* Spacing from the top */
+    margin-bottom: 3%; /* Spacing before the boxes */
+    font-weight: 700; /* Bold font weight */
+    color: #FFFFFF; /* White color for contrast against the gradient background */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Slight spacing between letters */
+}
