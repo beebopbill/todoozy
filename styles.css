@@ -1,11 +1,16 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f6f6f6; /* Off white background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
+    background: linear-gradient(45deg, #FFD700, #FF6347, #FFD700, #FF6347);
+    background-size: 400% 400%;
+    animation: gradientBG 10s infinite;
+    overflow: auto; /* Allows scrolling */
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
@@ -13,41 +18,32 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 960px; /* Adjust as needed */
+    max-width: 960px;
+    margin: 2% auto; /* Added margin for spacing */
 }
 
 .box {
-    flex-basis: calc(23.33% - 20px); /* 3 boxes per row with 10px gap */
+    flex-basis: calc(33.33% - 20px);
     background-color: #fff;
     margin: 10px;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
 }
 
 .box h2 {
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .box p {
     font-weight: 300;
 }
 
-.checkmark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-    color: transparent; /* Initially hidden */
-}
-
 .box.completed {
-    background-color: #e6ffe6; /* Pale green */
-}
-
-.box.completed .checkmark {
-    color: green;
+    background-color: #FFD700; /* Gold color for a premium feel */
+    transform: scale(1.05); /* Slight zoom effect */
 }
