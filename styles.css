@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f6f6f6; /* Off white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px; /* Adjust as needed */
+}
+
+.box {
+    flex-basis: calc(23.33% - 20px); /* 3 boxes per row with 10px gap */
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.box h2 {
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-weight: 300;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: transparent; /* Initially hidden */
+}
+
+.box.completed {
+    background-color: #e6ffe6; /* Pale green */
+}
+
+.box.completed .checkmark {
+    color: green;
+}
