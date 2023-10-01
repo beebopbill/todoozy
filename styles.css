@@ -23,7 +23,7 @@ body {
 }
 
 .box {
-    flex-basis: calc(33.33% - 20px);
+    width: 100%; 
     background-color: #fff;
     margin: 10px;
     padding: 20px;
